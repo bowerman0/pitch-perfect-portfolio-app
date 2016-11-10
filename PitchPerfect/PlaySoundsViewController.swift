@@ -72,6 +72,10 @@ class PlaySoundsViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         configureUI(playState: .NotPlaying)
     }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        stopAudio()
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
